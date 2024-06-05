@@ -9,6 +9,7 @@ body {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to right, #aba7a2, #e2dfdc, #b4b2b1);
+    padding: 20px; /* Add padding around the edges of the site */
 }
 
 .about-row {
@@ -16,17 +17,23 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: nowrap; /* Ensure no wrapping for desktop layout */
+    gap: 20px; /* Add gap between columns */
 }
 
 .about-col1 img {
     border-radius: 15px;
     width: 100%;
     height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.about-col1 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Hover effect */
 }
 
 .about-col1 {
     flex-basis: 35%;
-    margin: 2em 0; /* Remove auto margin for proper alignment */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,16 +44,33 @@ body {
     margin-right: 40px;
     text-align: left; /* Change to left for better readability */
     flex-basis: 55%;
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.about-col2:hover {
+    transform: scale(1.02); /* Hover effect */
 }
 
 .about-col2 h2 {
     font-size: 2.5rem;
     font-weight: bold;
+    transition: color 0.3s ease; /* Add transition for hover effect */
+}
+
+.about-col2 h2:hover {
+    color: #333; /* Hover effect */
 }
 
 .about-col2 button {
     text-align: center;
     margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.about-col2 button:hover {
+    background-color: #ddd; /* Hover effect */
+    transform: scale(1.05); /* Hover effect */
 }
 
 .tab-titles {
@@ -62,6 +86,12 @@ body {
     cursor: pointer;
     background: transparent;
     border: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.tab-link:hover {
+    color: #2da62d; /* Hover effect */
+    transform: scale(1.1); /* Hover effect */
 }
 
 .active-link {
@@ -86,6 +116,12 @@ body {
 .tab-contents ul li {
     list-style-type: none;
     margin: 10px 0;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.tab-contents ul li:hover {
+    color: #2da62d; /* Hover effect */
+    transform: scale(1.05); /* Hover effect */
 }
 
 .tab-contents ul li span {
