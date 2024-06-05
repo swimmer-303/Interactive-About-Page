@@ -1,162 +1,181 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     min-height: 100vh;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to right, #aba7a2, #e2dfdc, #b4b2b1);
 }
-.about-row{
+
+.about-row {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-wrap: nowrap; /* Ensure no wrapping for desktop layout */
 }
-.about-col1 img{
+
+.about-col1 img {
     border-radius: 15px;
+    width: 100%;
+    height: auto;
 }
-.about-col1{
+
+.about-col1 {
     flex-basis: 35%;
-    margin: 2em auto;
+    margin: 2em 0; /* Remove auto margin for proper alignment */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.about-col2{
+
+.about-col2 {
     margin-top: 40px;
     margin-right: 40px;
-    text-align: center;
+    text-align: left; /* Change to left for better readability */
     flex-basis: 55%;
 }
-.about-col2 h2{
+
+.about-col2 h2 {
     font-size: 2.5rem;
     font-weight: bold;
 }
-.about-col2 button{
-    text-align: auto;
+
+.about-col2 button {
+    text-align: center;
     margin-top: 20px;
 }
-.tab-titles{
+
+.tab-titles {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     padding-top: 1.5em;
 }
-.tab-link{
+
+.tab-link {
     font-size: 1.5em;
     position: relative;
     cursor: pointer;
     background: transparent;
     border: none;
 }
-.active-link{
+
+.active-link {
     background: #faf7f7;
     border-radius: 5px;
     width: auto;
     padding: 2px 4px;
     transition: 0.1s;
 }
-/* .tab-link::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #2da62d;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-} */
-.tab-link.active-link::after{
+
+.tab-link.active-link::after {
     width: 50%;
 }
-.tab-contents{
+
+.tab-contents {
     text-align: left;
     margin-left: 3em;
     margin-top: 2em;
     display: none;
 }
-.tab-contents ul li{
+
+.tab-contents ul li {
     list-style-type: none;
     margin: 10px 0;
 }
-.tab-contents ul li span{
+
+.tab-contents ul li span {
     color: #330202;
     font-size: 14px;
 }
-.tab-contents.active-tab{
+
+.tab-contents.active-tab {
     display: block;
     background: #faf7f7;
-    height: 40vh;
-    max-height: auto;
+    height: auto;
     border-radius: 15px;
     padding: 20px;
     transition: 0.1s ease;
 }
 
-@media (max-width:1200px){
-    .about-col1 img{
+@media (max-width: 1200px) {
+    .about-col1 img {
         width: 450px;
         flex-basis: 100%;
     }
-    .about-col2{
+
+    .about-col2 {
         padding: 3px;
         margin-top: 20px;
         text-align: center;
         flex-basis: 100%;
     }
-    .tab-contents.active-tab{
+
+    .tab-contents.active-tab {
         height: auto;
     }
-    body{
+
+    body {
         margin-bottom: 10px;
     }
-
 }
 
-@media (max-width: 600px){
-    .about-col1 img{
+@media (max-width: 600px) {
+    .about-col1 img {
         width: 350px;
         flex-basis: 100%;
     }
-    .about-col2{
+
+    .about-col2 {
         padding: 3px;
         margin-top: 20px;
         text-align: center;
         flex-basis: 100%;
     }
-    .tab-link{
+
+    .tab-link {
         font-size: 1.2em;
         position: relative;
         cursor: pointer;
     }
-    .tab-contents.active-tab{
+
+    .tab-contents.active-tab {
         height: auto;
     }
-    body{
+
+    body {
         margin-bottom: 10px;
     }
 }
-@media (max-width: 300px){
-    .about-col1 img{
+
+@media (max-width: 300px) {
+    .about-col1 img {
         width: 250px;
         flex-basis: 100%;
     }
-    .about-col2{
+
+    .about-col2 {
         padding: 3px;
         margin-top: 5px;
         text-align: center;
         flex-basis: 100%;
     }
-    .tab-link{
+
+    .tab-link {
         font-size: 1em;
         position: relative;
         cursor: pointer;
     }
-    .tab-contents.active-tab{
+
+    .tab-contents.active-tab {
         height: auto;
     }
-    body{
+
+    body {
         margin-bottom: 10px;
     }
-    
 }
-
