@@ -8,7 +8,7 @@ body {
     min-height: 100vh;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to right, #aba7a2, #e2dfdc, #b4b2b1);
+    background: linear-gradient(to bottom, #aba7a2, #e2dfdc, #b4b2b1);
     padding: 40px 20px 20px 20px; /* Add padding around the edges of the site, including more padding at the top */
 }
 
